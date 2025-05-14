@@ -1,0 +1,26 @@
+# Force HTTPS
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Redirect all HTTP requests to HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Serve React Application
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Redirect everything except existing files and directories to index.html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Disable Directory Listings
+Options -Indexes
+
+# Specify CORS policy if needed
+<IfModule mod_headers.c>
+  Header set Access-Control-Allow-Origin "*"
+</IfModule>
