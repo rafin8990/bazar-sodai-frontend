@@ -3,7 +3,8 @@ import { useSearchParams } from 'react-router-dom';
 import { Search, Filter, X } from 'lucide-react';
 import ProductCard from '../components/ui/ProductCard';
 import { products, categories, searchProducts } from '../data/products';
-import { Product } from '../types/types';
+import type { Product } from '../types/types';
+
 
 const Products: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();

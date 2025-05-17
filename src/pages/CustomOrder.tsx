@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FileText, Upload, ArrowRight } from 'lucide-react';
 import { useCustomOrder } from '../context/CustomOrderContext';
-import { CustomOrder } from '../types/types';
+
 import toast from 'react-hot-toast';
+import type { CustomOrder } from '../types/types';
 
 const CustomOrderPage: React.FC = () => {
   const navigate = useNavigate();

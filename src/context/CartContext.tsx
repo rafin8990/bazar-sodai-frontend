@@ -1,6 +1,8 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { CartItem, Product } from '../types/types';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import type { ReactNode } from 'react';
+
 import toast from 'react-hot-toast';
+import type { CartItem, Product } from '../types/types';
 
 interface CartContextType {
   cart: CartItem[];

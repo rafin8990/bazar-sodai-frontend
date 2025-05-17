@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Category } from '../../types/types';
+import type { Category } from '../../types/types';
+
 
 interface CategoryCardProps {
   category: Category;

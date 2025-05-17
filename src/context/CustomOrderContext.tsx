@@ -1,6 +1,8 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { CustomOrder } from '../types/types';
+import React, { createContext, useContext, useState } from 'react';
+import type { ReactNode } from 'react';
+
 import toast from 'react-hot-toast';
+import type { CustomOrder } from '../types/types';
 
 interface CustomOrderContextType {
   orders: CustomOrder[];
